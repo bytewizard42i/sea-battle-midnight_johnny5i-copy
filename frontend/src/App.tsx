@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { MidnightButton } from "./useMidnight";
 import DisplayMessage from "./components/DisplayMessage";
 import BoardCell from "./components/BoardCell";
 
@@ -120,53 +121,58 @@ function App() {
   }, []);
 
   return (
-    <div id="board">
-      <DisplayMessage msg={displayMsg} />
-      <table>
-        <thead>
-          <tr>
-            <th className="numbers"></th>
-            <th className="numbers">1</th>
-            <th className="numbers">2</th>
-            <th className="numbers">3</th>
-            <th className="numbers">4</th>
-            <th className="numbers">5</th>
-            <th className="numbers">6</th>
-            <th className="numbers">7</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th className="letters">A</th>
-            {generateCells(1, 7)}
-          </tr>
-          <tr>
-            <th className="letters">B</th>
-            {generateCells(8, 14)}
-          </tr>
-          <tr>
-            <th className="letters">C</th>
-            {generateCells(15, 21)}
-          </tr>
-          <tr>
-            <th className="letters">D</th>
-            {generateCells(22, 28)}
-          </tr>
-          <tr>
-            <th className="letters">E</th>
-            {generateCells(29, 35)}
-          </tr>
-          <tr>
-            <th className="letters">F</th>
-            {generateCells(36, 42)}
-          </tr>
-          <tr>
-            <th className="letters">G</th>
-            {generateCells(43, 49)}
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    <>
+      <div id="board">
+        <DisplayMessage msg={displayMsg} />
+        <table>
+          <thead>
+            <tr>
+              <th className="numbers"></th>
+              <th className="numbers">1</th>
+              <th className="numbers">2</th>
+              <th className="numbers">3</th>
+              <th className="numbers">4</th>
+              <th className="numbers">5</th>
+              <th className="numbers">6</th>
+              <th className="numbers">7</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th className="letters">A</th>
+              {generateCells(1, 7)}
+            </tr>
+            <tr>
+              <th className="letters">B</th>
+              {generateCells(8, 14)}
+            </tr>
+            <tr>
+              <th className="letters">C</th>
+              {generateCells(15, 21)}
+            </tr>
+            <tr>
+              <th className="letters">D</th>
+              {generateCells(22, 28)}
+            </tr>
+            <tr>
+              <th className="letters">E</th>
+              {generateCells(29, 35)}
+            </tr>
+            <tr>
+              <th className="letters">F</th>
+              {generateCells(36, 42)}
+            </tr>
+            <tr>
+              <th className="letters">G</th>
+              {generateCells(43, 49)}
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div className="midnight-button">
+        <MidnightButton />
+      </div>
+    </>
   );
 }
 

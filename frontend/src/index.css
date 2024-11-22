@@ -141,3 +141,11 @@ td div {
   transform: rotate(90deg);
   box-shadow: 3px -3px #c77daa;
 }
+
+.midnight-button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
