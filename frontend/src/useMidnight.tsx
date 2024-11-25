@@ -87,7 +87,7 @@ export const MidnightButton = (props: MidnightButtonProps): JSX.Element => {
     useMidnight().then(mn => setMidnight(mn));
   }, []);
 
-  return midnight ? (
+  return midnight && midnight.isLaceInstalled ? (
     midnight.isEnabled ? (
       <button style={props.styles || defaultStyles}>
         <img
