@@ -1,3 +1,4 @@
+import type { DAppConnectorWalletAPI } from "@midnight-ntwrk/dapp-connector-api";
 import { useState, useEffect } from "react";
 import laceLogo from "./assets/lace.svg";
 
@@ -6,6 +7,7 @@ export type Midnight = {
   isLaceInstalled: boolean;
   isEnabled: boolean;
   userAddress: undefined | string;
+  enable?: () => Promise<DAppConnectorWalletAPI>;
 };
 
 export type MidnightButtonProps = {
@@ -37,7 +39,8 @@ export const useMidnight = async (): Promise<Midnight> => {
         apiVersion: mnLace.apiVersion,
         isLaceInstalled: true,
         isEnabled,
-        userAddress: ""
+        userAddress: "",
+        enable: mnLace.enable
       };
     }
   }
@@ -52,6 +55,14 @@ export const useMidnight = async (): Promise<Midnight> => {
 
 export const MidnightButton = (props: MidnightButtonProps): JSX.Element => {
   let [midnight, setMidnight] = useState<undefined | Midnight>(undefined);
+
+  const connectWallet = async (midnight: Midnight | undefined) => {
+    if (midnight && midnight.enable) {
+      const api = await midnight.enable();
+      const state = await api.state();
+      setMidnight({ ...midnight, isEnabled: true, userAddress: state.address });
+    }
+  };
 
   const defaultStyles = {
     padding: "10px",
@@ -87,7 +98,12 @@ export const MidnightButton = (props: MidnightButtonProps): JSX.Element => {
         <span>{truncateAddr(midnight.userAddress)}</span>
       </button>
     ) : (
-      <button style={props.styles || defaultStyles}>Connect Lace Wallet</button>
+      <button
+        style={props.styles || defaultStyles}
+        onClick={() => connectWallet(midnight)}
+      >
+        Connect Lace Wallet
+      </button>
     )
   ) : (
     <a
