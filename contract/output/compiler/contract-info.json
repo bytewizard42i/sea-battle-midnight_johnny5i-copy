@@ -1,0 +1,27 @@
+{
+  "circuits": [
+    {
+      "name": "newGame",
+      "pure": false,
+      "arguments": [
+        {
+          "name": "plOne",
+          "type": {
+            "type-name": "Bytes",
+            "length": 32
+          }
+        },
+        {
+          "name": "plTwo",
+          "type": {
+            "type-name": "Bytes",
+            "length": 32
+          }
+        }
+      ],
+      "result-type": {
+        "type-name": "Void"
+      }
+    }
+  ]
+}

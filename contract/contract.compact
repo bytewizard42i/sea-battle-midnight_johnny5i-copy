@@ -1,0 +1,21 @@
+// pragma language_version >= 0.20.0;
+
+import CompactStandardLibrary;
+
+enum CellState { unset, hit, miss }
+
+// public state
+export ledger gameStarted: Cell<Boolean> ;
+export ledger cellState: Cell<CellState> ;
+export ledger grid: Map<Uint<32>, CellState> ;
+export ledger playerOne: Cell<Bytes<32>> ;
+export ledger playerTwo: Cell<Bytes<32>> ;
+
+// creates a new game
+export circuit newGame(plOne: Bytes<32>, plTwo: Bytes<32>): Void {
+  assert (gameStarted == true) "Game has already started" ;
+
+  playerOne.write(plOne) ;
+  playerTwo.write(plTwo) ;
+  gameStarted.write(true) ;
+}

@@ -1,0 +1,8 @@
+{
+  "version": 3,
+  "file": "index.cjs",
+  "sourceRoot": "../../",
+  "sources": ["contract.compact"],
+  "names": [],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;EAEA;;;;;;;;MAYA,AAAA,OAMC;;;;cANsB,KAAgB;cAAE,KAAgB;;;;;;;;;;;;;;;;;;;;;;yCAAlC,KAAgB,+BAAE,KAAgB;;;;;;;mEAAlC,KAAgB,EAAE,KAAgB;;;OAMxD;;;GAAA;EAlBD;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;IAKA;;;;;;;;;;sBAA0C;IAC1C;;;;;;;;;;sBAA0C;IAC1C;;;;;;;;;;;sBAA8C;IAC9C;;;;;;;;;;sBAA0C;IAC1C;;;;;;;;;;sBAA0C;;;;;;;GASzC;EAND,AAAA,WAMC,4BANsB,KAAgB,EAAE,KAAgB;oDAC/C;;;;;;;;;;;;;sEAAW;;;;IAEnB;;;;;;;yGAAgB,KAAK;;;sBAAZ;IACT;;;;;;;yGAAgB,KAAK;;;sBAAZ;IACT;;;;;;;;;;sBAAW;GACZ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;IAbD;qCAAA;;;;;;;;;;;;;uDAA0C;KAAA;IAC1C;qCAAA;;;;;;;;;;;;;uDAA0C;KAAA;IAC1C;;;;uCAAA;;;;;;;;;;;;;;;;;;yDAA8C;;;;;uCAA9C;;;;;;;;;;;;;;yDAA8C;;;;;;;;;;;;uCAA9C;;;;;;;;;;;;;;;;;yDAA8C;;;;;;;;;;;;uCAA9C;;;;;;;;;;;;;;;;;;;;yDAA8C;;;;;;;;KAAA;IAC9C;qCAAA;;;;;;;;;;;;;uDAA0C;KAAA;IAC1C;qCAAA;;;;;;;;;;;;;uDAA0C;KAAA;;;;;;;;;;;;;;"
+}
