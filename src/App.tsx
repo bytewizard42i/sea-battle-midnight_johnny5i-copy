@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { MidnightButton } from "./useMidnight";
+import { MidnightButton } from "use-midnight";
 import DisplayMessage from "./components/DisplayMessage";
 import BoardCell from "./components/BoardCell";
 
